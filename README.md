@@ -11,7 +11,7 @@ This project calculates student's final academic standing based on pre-existing 
 - Python 3
 - Bash shell
 
-* First cd Lab1_lkamikazi1
+## First 'cd Lab1_lkamikazi1'
 
 ## How to run grade-evaluator.py
 - python3 grade-evaluator.py
