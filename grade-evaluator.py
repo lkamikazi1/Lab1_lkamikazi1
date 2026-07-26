@@ -3,11 +3,20 @@ import sys
 import os
 
 def load_csv_data():
-    filename = input("Enter CSV file name (grades.csv): ")
+    filename = input("Enter the name of the CSV file to process (grades.csv): ")
 
     if not os.path.exists(filename):
-        print("Error: File '{0}' not found.".format(filename))
-        sys.exit(1)
+        print("'{0}' not found. Creating grades.csv...".format(filename))
+        sample_data = (
+            "assignment,group,score,weight\n"
+            "Quiz,Formative,85,20\n"
+            "Group Exercise,Formative,40,20\n"
+            "Functions and Debbuging Lab,Formative,45,20\n"
+            "Midterm Project - Simple Calculator,Summative,70,20\n"
+            "Final Project - Text-Based Game,Summative,60,20\n"
+        )
+        with open(filename, mode='w', encoding='utf-8') as file:
+            file.write(sample_data)
 
     assignments = []
 
